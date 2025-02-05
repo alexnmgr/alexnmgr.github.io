@@ -116,7 +116,7 @@ document
 */
 // MQTT ******************************************************
 
-const client = mqtt.connect('ws://test.mosquitto.org:8081'); // connect to MQTT brocker via WebSocket
+const client = mqtt.connect('wss://test.mosquitto.org:8081'); // connect to MQTT brocker via WebSocket
 
 // Send message function
 function playAudio(computerId) {
