@@ -124,8 +124,18 @@ function playAudio(computerId) {
     client.publish('hsf/audio/control', message); // Sending message to specified topic
 }
 
+// Play all audio function
+function playAllAudio() {
+    playAudio(1);
+    playAudio(2);
+    playAudio(3);
+}
+
 // Assign events to buttons
 document.getElementById('raum1btn').addEventListener('click', () => playAudio(1));
 document.getElementById('raum2btn').addEventListener('click', () => playAudio(2));
 document.getElementById('raum3btn').addEventListener('click', () => playAudio(3));
+
+// Assign events to other buttons
+document.getElementById('alleRaumbtn').addEventListener('click', () => playAllAudio());
 
